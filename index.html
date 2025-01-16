@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Game ❤️</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 40px;
+            color: #d63384;
+        }
+        h2 {
+            font-size: 18px;
+            color: #6a1b9a;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .tarif {
+            background-color: #ffcccb;
+        }
+        .manana {
+            background-color: #c8e6c9;
+        }
+        .clash {
+            background-color: #bbdefb;
+        }
+        .pyar {
+            background-color: #ffcdd2;
+        }
+        #response {
+            font-size: 20px;
+            color: #1a237e;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Love Game ❤️</h1>
+    <h2>Choose an option for a personalized response:</h2>
+
+    <button class="tarif" onclick="generateResponse('tarif')">1: Meri Tarif Karo</button>
+    <button class="manana" onclick="generateResponse('manana')">2: Mujhe Manao</button>
+    <button class="clash" onclick="generateResponse('clash')">3: Aaj Mujhe Clash Karna Hai</button>
+    <button class="pyar" onclick="generateResponse('pyar')">4: Pyar Wala Mood</button>
+
+    <div id="response"></div>
+
+    <script>
+        const tarifResponses = [
+            "Tumhari aankhein chaand se bhi zyada khoobsurat hain. 🌙",
+            "Tumhare bina zindagi adhoori si lagti hai.",
+            "Tumhari muskaan mera sab kuch hai. 😊",
+            "Tumhare baal kaise itne perfect hote hain? 😍",
+            "Tumhare honthon pe muskaan ho toh saara din roshan lagta hai. 💖",
+            "Tumhari awaaz mein ek khaas baat hai, dil ko sukoon milta hai.",
+            "Tumhara chehra mere sapno ka hai, dil se pyaar karti hoon main.",
+            "Tumhari aankhein sabse khoobsurat hain, chaand bhi sharmata hai."
+        ];
+
+        const mananaResponses = [
+            "Jo tumhara gussa hai, woh bhi pyaara lagta hai. 🥰",
+            "Acha chalo, sorry boloongi, bas ek smile de do! 😊",
+            "Dil toh mera aapka hi hai, kyun gussa? ❤️",
+            "Tum khafa ho aur main chup? Nahin, aisa kabhi nahin hoga!",
+            "Tumhara gussa bhi meri zindagi ka hissa hai. 😘",
+            "Agar tum gussa ho, toh main sorry bola toh tum khush ho jaogi? 😇",
+            "Tumhari muskaan se zyada khoobsurat kuch nahi.",
+            "Dil se sorry, yeh gussa humesha nahi chalega."
+        ];
+
+        const clashResponses = [
+            "Ladayi karte ho, phir bhi pyaare lagte ho! 😂",
+            "Tumhari argument har baar jeet jaati hai! 😅",
+            "Ek din tumhari har baat maanni padegi, haan. 😜",
+            "Tumhara logic sabse alag hota hai, fir bhi dil maan leta hai!",
+            "Tum mujhe hamesha har baat mein jeetne nahi doge na?",
+            "Kabhi kabhi tumhaari baat samajh nahi aati, lekin tum bilkul galat nahi ho!",
+            "Yeh ladayi bhi kuch alag hai, tumhare saath."
+        ];
+
+        const pyarResponses = [
+            "Dil se likhi hui ek baat: Tum meri duniya ho. ❤️",
+            "Pyar mein har baat khoobsurat lagti hai, jaise tum.",
+            "Shayri: 'Tere bina zindagi gum ho jaaye, tu paas ho toh har gum kho jaaye.'",
+            "Ek kahani: Ek baar ek ladka aur ladki mile, aur unhone milke duniya jeet li.",
+            "Pyar mein rishton ki gehraai hoti hai, tum ho mere liye us gehraai ka matlab.",
+            "Tumse pyaar karna meri zindagi ka sabse khoobsurat faisla tha.",
+            "Shayari: 'Aankhon mein sapne, dil mein khwabon ka raaz hai, tum ho jo saath toh har pal pyaar ka andaaz hai.'"
+        ];
+
+        function generateResponse(option) {
+            let response;
+            if (option === 'tarif') {
+                response = tarifResponses[Math.floor(Math.random() * tarifResponses.length)];
+            } else if (option === 'manana') {
+                response = mananaResponses[Math.floor(Math.random() * mananaResponses.length)];
+            } else if (option === 'clash') {
+                response = clashResponses[Math.floor(Math.random() * clashResponses.length)];
+            } else if (option === 'pyar') {
+                response = pyarResponses[Math.floor(Math.random() * pyarResponses.length)];
+            }
+
+            document.getElementById("response").innerHTML = response;
+        }
+    </script>
+
+</body>
+</html>
