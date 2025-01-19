@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Game ❤️</title>
+    <title> SHAAZ ❤️</title>
     <style>
         body {
             background-color: #ffe6e6;
@@ -38,6 +38,9 @@
         .pyar {
             background-color: #ffcdd2;
         }
+        .sali {
+            background-color: #ffeb3b;
+        }
         #response {
             font-size: 20px;
             color: #1a237e;
@@ -54,6 +57,7 @@
     <button class="manana" onclick="generateResponse('manana')">2: Mujhe Manao</button>
     <button class="clash" onclick="generateResponse('clash')">3: Aaj Mujhe Clash Karna Hai</button>
     <button class="pyar" onclick="generateResponse('pyar')">4: Pyar Wala Mood</button>
+    <button class="sali" onclick="generateResponse('sali')">5: Sali </button>
 
     <div id="response"></div>
 
@@ -65,8 +69,10 @@
             "Tumhare baal kaise itne perfect hote hain? 😍",
             "Tumhare honthon pe muskaan ho toh saara din roshan lagta hai. 💖",
             "Tumhari awaaz mein ek khaas baat hai, dil ko sukoon milta hai.",
-            "Tumhara chehra mere sapno ka hai, dil se pyaar karti hoon main.",
-            "Tumhari aankhein sabse khoobsurat hain, chaand bhi sharmata hai."
+            "Tum or ye tmahre nakhre ufff.",
+            "Muskuraye to Alam madhosh kar de......mera huzzor, Chalata phirta maykhana hai koi",
+            "Wo payal nhi pahnti pao me , Bas ek kale dhage se kahar barsati hai",
+            "Tumhara chehra mere sapno ka hai, dil se pyaar karti hoon main."
         ];
 
         const mananaResponses = [
@@ -77,6 +83,7 @@
             "Tumhara gussa bhi meri zindagi ka hissa hai. 😘",
             "Agar tum gussa ho, toh main sorry bola toh tum khush ho jaogi? 😇",
             "Tumhari muskaan se zyada khoobsurat kuch nahi.",
+            "Kabhi dekhi h surat aayeine me apni,Tm khd ke kam or Mere jayda lagte ho",
             "Dil se sorry, yeh gussa humesha nahi chalega."
         ];
 
@@ -100,6 +107,19 @@
             "Shayari: 'Aankhon mein sapne, dil mein khwabon ka raaz hai, tum ho jo saath toh har pal pyaar ka andaaz hai.'"
         ];
 
+        const saliResponses = [
+            "Rishtedaar toh bahut hain, par tum sabse khaas ho.",
+            "Tumhari hasi mein ek jaadu hai, dil ko choo jaata hai.",
+            "Tumhare saath mehfil roshan ho jaati hai.",
+            "Tera pyaar aur mazaak zindagi ka rang hai.",
+            "Teri baatein dil ko khushi de jaati hain.",
+            "Teri hasi se mehfil mein jaan aa jaati hai.",
+            "Tu baat kare toh lagta hai duniya ruk gayi.",
+            "Tere saath har baat yaadon ka hissa ban jaati hai.",
+            "Tere jaisa rishta duniya mein kahin aur nahi.",
+            "Teri muskaan mein duniya bhar ki khushi hai."
+        ];
+
         function generateResponse(option) {
             let response;
             if (option === 'tarif') {
@@ -110,6 +130,8 @@
                 response = clashResponses[Math.floor(Math.random() * clashResponses.length)];
             } else if (option === 'pyar') {
                 response = pyarResponses[Math.floor(Math.random() * pyarResponses.length)];
+            } else if (option === 'sali') {
+                response = saliResponses[Math.floor(Math.random() * saliResponses.length)];
             }
 
             document.getElementById("response").innerHTML = response;
